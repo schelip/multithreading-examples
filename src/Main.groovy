@@ -2,6 +2,7 @@ static void main(String[] args) {
   def scan = new Scanner(System.in)
 
   def compare = {linear, parallel ->
+    // Compara os resultados e tempo de execuçao de um algoritmo linear com um paralelo
     def startTime = System.currentTimeMillis()
     def resultLinear = linear()
     def endTime = System.currentTimeMillis()

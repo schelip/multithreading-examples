@@ -13,6 +13,8 @@ class Graph {
         edges = e
     }
 
+    // Retorna grafo com um número de arestas baseado em uma densidade (probabilidade) pe, cada uma com peso aleatório
+    // de no máximo maxW
     static withRandom(int n, double pe, int maxW) {
         assert 0 <= pe && pe <= 1
         assert maxW >= 0

@@ -1,6 +1,7 @@
 class ParallelOperations {
     public static int MAX_THREADS = 8
 
+    // Distribui um número de processo igualmente entre o número máximo de threads
     static distribute(int tasks) {
         def dist = []
         int each = (tasks / MAX_THREADS) as Integer
@@ -18,6 +19,7 @@ class ParallelOperations {
         int[] tasks = distribute(m1.rows)
         def rowsAssigned = 0
 
+        // Cada thread executa um número de linhas separadamente
         for (t in 0..<MAX_THREADS) {
             int rows = tasks[t]
             if (rows > 0) {
@@ -46,6 +48,7 @@ class ParallelOperations {
         int[] tasks = distribute(m1.rows)
         def rowsAssigned = 0
 
+        // Cada thread executa um número de linhas separadamente
         for (t in 0..<MAX_THREADS) {
             int rows = tasks[t]
             if (rows > 0) {
@@ -76,6 +79,7 @@ class ParallelOperations {
         int[] tasks = distribute(m1.rows)
         def rowsAssigned = 0
 
+        // Cada thread executa um número de linhas separadamente
         for (t in 0..<MAX_THREADS) {
             int rows = tasks[t]
             if (rows > 0) {
@@ -105,6 +109,7 @@ class ParallelOperations {
         int[] tasks = distribute(graph.nodes)
         def rowsAssigned = 0
 
+        // Cada thread executa um número de iteraçoes do algoritmo independentemente
         for (t in 0..<MAX_THREADS) {
             int rows = tasks[t]
             if (rows > 0) {

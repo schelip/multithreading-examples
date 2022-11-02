@@ -24,6 +24,7 @@ class Matrix {
         return fillRandom(tam, tam, max)
     }
 
+    // Retorna nova matrix preenchida com valores aleatórios menores que max
     static fillRandom(int rows, int cols, int max) {
         def m = new Matrix(rows, cols)
         Random rnd = new Random()
